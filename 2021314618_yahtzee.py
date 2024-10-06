@@ -146,8 +146,8 @@ for i in range(13):
 		p1_scores_expected['Fives'] = result.count(5) * 5
 		p1_scores_expected['Sixes'] = result.count(6) * 6
 		p1_scores_expected['Chance'] = sum(result)
-		p1_scores_expected['Three of a Kind'] = sum(result) if max_rep > 3 else 0
-		p1_scores_expected['Four of a Kind'] = sum(result) if max_rep > 4 else 0
+		p1_scores_expected['Three of a Kind'] = sum(result) if tok_check else 0
+		p1_scores_expected['Four of a Kind'] = sum(result) if fok_check else 0
 		p1_scores_expected['Full House'] = 25 if (len(set(result)) == 2 and max_rep == 3) else 0
 		p1_scores_expected['Small Straight'] = 30 if ss_check else 0
 		p1_scores_expected['Large Straight'] = 40 if ls_check else 0
@@ -296,11 +296,16 @@ for i in range(13):
 				print("Result of dice")
 				print(result)
 
-		max_rep = 1
-		for j in range(5):
-			temp_count = result.count(result[i])
-			if temp_count > max_rep:
-				max_rep = temp_count
+		temp_set = set(result)
+		tok_check = False
+		fok_check = False
+		if len(temp_set) <= 3:
+			for i in temp_set:
+				if result.count(i) >= 4:
+					tok_check = True
+					fok_check = True
+				elif result.count(i) >= 3:
+					tok_check = True
 
 		temp_list = sorted(result)
 		ss_check = False
@@ -317,8 +322,8 @@ for i in range(13):
 		p2_scores_expected['Fives'] = result.count(5) * 5
 		p2_scores_expected['Sixes'] = result.count(6) * 6
 		p2_scores_expected['Chance'] = sum(result)
-		p2_scores_expected['Three of a Kind'] = sum(result) if max_rep > 3 else 0
-		p2_scores_expected['Four of a Kind'] = sum(result) if max_rep > 4 else 0
+		p2_scores_expected['Three of a Kind'] = sum(result) if tok_check else 0
+		p2_scores_expected['Four of a Kind'] = sum(result) if fok_check else 0
 		p2_scores_expected['Full House'] = 25 if (len(set(result)) == 2 and max_rep == 3) else 0
 		p2_scores_expected['Small Straight'] = 30 if ss_check else 0
 		p2_scores_expected['Large Straight'] = 40 if ls_check else 0
