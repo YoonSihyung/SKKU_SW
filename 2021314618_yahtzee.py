@@ -148,7 +148,7 @@ for i in range(13):
 		p1_scores_expected['Chance'] = sum(result)
 		p1_scores_expected['Three of a Kind'] = sum(result) if tok_check else 0
 		p1_scores_expected['Four of a Kind'] = sum(result) if fok_check else 0
-		p1_scores_expected['Full House'] = 25 if (len(set(result)) == 2 and max_rep == 3) else 0
+		p1_scores_expected['Full House'] = 25 if (len(set(result)) == 2 and tok_check == True and fok_check == False) else 0
 		p1_scores_expected['Small Straight'] = 30 if ss_check else 0
 		p1_scores_expected['Large Straight'] = 40 if ls_check else 0
 		p1_scores_expected['Yahtzee'] = 50 if len(set(result)) == 1 else 0
@@ -249,7 +249,7 @@ for i in range(13):
 			if reroll not in ['Y', 'N']:
 				print("You input wrong option. Please enter again.")
 				print("")
-				print("Reroll the dice? [Y/N]", end = '')
+				print("Reroll the dice? [Y/N]", end = ' ')
 				reroll = input()
 				print("")
 			else:
@@ -270,12 +270,14 @@ for i in range(13):
 
 			print("Result of dice")
 			print(result)
-			print("Reroll the dice? [Y/N]", end = '')
+			print("Reroll the dice? [Y/N]", end = ' ')
 			reroll = input()
 			print("")
 			while True:
 				if reroll not in ['Y', 'N']:
-					print("Please enter: [Y/N]")
+					print("You input wrong option. Please enter again.")
+					print("")
+					print("Reroll the dice? [Y/N]", end = ' ')
 					reroll = input()
 					print("")
 				else:
@@ -324,7 +326,7 @@ for i in range(13):
 		p2_scores_expected['Chance'] = sum(result)
 		p2_scores_expected['Three of a Kind'] = sum(result) if tok_check else 0
 		p2_scores_expected['Four of a Kind'] = sum(result) if fok_check else 0
-		p2_scores_expected['Full House'] = 25 if (len(set(result)) == 2 and max_rep == 3) else 0
+		p2_scores_expected['Full House'] = 25 if (len(set(result)) == 2 and tok_check == True and fok_check == False) else 0
 		p2_scores_expected['Small Straight'] = 30 if ss_check else 0
 		p2_scores_expected['Large Straight'] = 40 if ls_check else 0
 		p2_scores_expected['Yahtzee'] = 50 if len(set(result)) == 1 else 0
