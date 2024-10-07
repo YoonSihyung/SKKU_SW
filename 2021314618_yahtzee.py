@@ -87,7 +87,7 @@ for i in range(13):
 			while True:
 				keep_check = False
 				for i in keep:
-					if (i < 1 or i > 5) or !isdigit(i):
+					if (i < 1 or i > 5) or isdigit(i) == False:
 						keep_check = True
 				if keep_check == False:
 					break
@@ -130,7 +130,7 @@ for i in range(13):
 				while True:
 					keep_check = False
 					for i in keep:
-						if (i < 1 or i > 5) or !isdigit(i):
+						if (i < 1 or i > 5) or isdigit(i) == False:
 							keep_check = True
 					if keep_check == False:
 						break
@@ -296,7 +296,7 @@ for i in range(13):
 			while True:
 				keep_check = False
 				for i in keep:
-					if (i < 1 or i > 5) or !isdigit(i):
+					if (i < 1 or i > 5) or isdigit(i) == False:
 						keep_check = True
 				if keep_check == False:
 					break
@@ -339,7 +339,7 @@ for i in range(13):
 				while True:
 					keep_check = False
 					for i in keep:
-						if (i < 1 or i > 5) or !isdigit(i):
+						if (i < 1 or i > 5) or isdigit(i) == False:
 							keep_check = True
 					if keep_check == False:
 						break
