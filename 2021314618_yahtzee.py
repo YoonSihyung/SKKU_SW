@@ -87,8 +87,8 @@ for i in range(13):
 
 			while True:
 				keep_check = False
-				for i in keep:
-					if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
+				for j in keep:
+					if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 						keep_check = True
 				if keep_check == False:
 					break
@@ -99,8 +99,8 @@ for i in range(13):
 				keep = list(map(int, input().split()))
 				print("")
 
-			for i in range(len(keep)):
-				keep[i] = int(keep[i])
+			for j in range(len(keep)):
+				keep[j] = int(keep[j])
 			
 			if keep[0] == 0 and len(keep) == 1:
 				result = random.choices(range(1, 7), k = 5)
@@ -133,8 +133,8 @@ for i in range(13):
 
 				while True:
 					keep_check = False
-					for i in keep:
-						if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
+					for j in keep:
+						if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 							keep_check = True
 					if keep_check == False:
 						break
@@ -145,8 +145,8 @@ for i in range(13):
 					keep = list(map(int, input().split()))
 					print("")
 
-				for i in range(len(keep)):
-					keep[i] = int(keep[i])
+				for j in range(len(keep)):
+					keep[j] = int(keep[j])
 
 				if keep[0] == 0 and len(keep) == 1:
 					result = random.choices(range(1, 7), k = 5)
@@ -302,8 +302,8 @@ for i in range(13):
 
 			while True:
 				keep_check = False
-				for i in keep:
-					if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
+				for j in keep:
+					if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 						keep_check = True
 				if keep_check == False:
 					break
@@ -314,8 +314,8 @@ for i in range(13):
 				keep = list(map(int, input().split()))
 				print("")
 
-			for i in range(len(keep)):
-				keep[i] = int(keep[i])
+			for j in range(len(keep)):
+				keep[j] = int(keep[j])
 
 			if keep[0] == 0 and len(keep) == 1:
 				result = random.choices(range(1, 7), k = 5)
@@ -348,8 +348,8 @@ for i in range(13):
 
 				while True:
 					keep_check = False
-					for i in keep:
-						if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
+					for j in keep:
+						if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 							keep_check = True
 					if keep_check == False:
 						break
@@ -360,8 +360,8 @@ for i in range(13):
 					keep = list(map(int, input().split()))
 					print("")
 
-				for i in range(len(keep)):
-					keep[i] = int(keep[i])
+				for j in range(len(keep)):
+					keep[j] = int(keep[j])
 
 				if keep[0] == 0 and len(keep) == 1:
 					result = random.choices(range(1, 7), k = 5)
