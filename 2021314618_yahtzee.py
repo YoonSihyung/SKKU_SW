@@ -17,10 +17,11 @@ for i in range(13):
 	print("2. Check the score sheet")
 	option = int(input())
 	print("")
+	
 	while True:
 		#wrong input loop
 		if option not in [1, 2]:
-			print("You input wrong option. Please enter again.")
+			print("You input wrong option. Please enter 1 or 2.")
 			print("")
 			print("Choose the option.")
 			print("1. Roll the dice")
@@ -67,9 +68,10 @@ for i in range(13):
 		print("Reroll the dice? [Y/N]", end = ' ')
 		reroll = input()
 		print("")
+		
 		while True:
 			if reroll not in ['Y', 'N']:
-				print("You input wrong option. Please enter again.")
+				print("You input wrong option. Please enter [Y/N].")
 				print("")
 				print("Reroll the dice? [Y/N]", end = ' ')
 				reroll = input()
@@ -82,6 +84,19 @@ for i in range(13):
 			print("If you want to change all of the dice, then input '0'")
 			keep = list(map(int, input().split()))
 			#wrong input handling
+			while True:
+				keep_check = False
+				for i in keep:
+					if (i < 1 or i > 5) or !isdigit(i):
+						keep_check = True
+				if keep_check == False:
+					break
+				print("You input wrong option. Please enter between 1~5.")
+				print("")
+				print("Choose all of dice that you want to keep. Seperate number with space.")
+				print("If you want to change all of the dice, then input '0'")
+				keep = list(map(int, input().split()))
+				print("")
 			
 			if keep[0] == 0 and len(keep) == 1:
 				result = random.choices(range(1, 7), k = 5)
@@ -95,9 +110,10 @@ for i in range(13):
 			print("Reroll the dice? [Y/N]", end = ' ')
 			reroll = input()
 			print("")
+			
 			while True:
 				if reroll not in ['Y', 'N']:
-					print("You input wrong option. Please enter agiain.")
+					print("You input wrong option. Please enter [Y/N].")
 					print("")
 					print("Reroll the dice? [Y/N]", end = ' ')
 					reroll = input()
@@ -109,6 +125,21 @@ for i in range(13):
 				print("Choose all of dice that you wnat to keep. Seperate number with space.")
 				print("If you want to change all of the dice, then input '0'")
 				keep = list(map(int, input().split()))
+				print("")
+
+				while True:
+					keep_check = False
+					for i in keep:
+						if (i < 1 or i > 5) or !isdigit(i):
+							keep_check = True
+					if keep_check == False:
+						break
+					print("You input wrong option. Please enter between 1~5.")
+					print("")
+					print("Choose all of dice that you want to keep. Seperate number with space.")
+					print("If you want to change all of the dice, then input '0'")
+					keep = list(map(int, input().split()))
+					print("")
 
 				if keep[0] == 0 and len(keep) == 1:
 					result = random.choices(range(1, 7), k = 5)
@@ -176,6 +207,7 @@ for i in range(13):
 		print("Choose a category to record the score")
 		category = input()
 		print("")
+		
 		while True:
 			if category not in p1_scores.keys() or p1_scores[category] != 0:
 				print("You input wrong category. Please enter again.")
@@ -199,7 +231,7 @@ for i in range(13):
 	print("")
 	while True:
 		if option not in [1, 2]:
-			print("You input wrong option. Please enter again.")
+			print("You input wrong option. Please enter 1 or 2.")
 			print("")
 			print("Choose the option.")
 			print("1. Roll the dice")
@@ -247,7 +279,7 @@ for i in range(13):
 		print("")
 		while True:
 			if reroll not in ['Y', 'N']:
-				print("You input wrong option. Please enter again.")
+				print("You input wrong option. Please enter [Y/N].")
 				print("")
 				print("Reroll the dice? [Y/N]", end = ' ')
 				reroll = input()
@@ -259,7 +291,21 @@ for i in range(13):
 			print("Choose all of dice that you want to keep. Seperate number with space.")
 			print("If you want to change all of the dice, then input '0'")
 			keep = list(map(int, input().split()))
+			print("")
                         #wrong input handling
+			while True:
+				keep_check = False
+				for i in keep:
+					if (i < 1 or i > 5) or !isdigit(i):
+						keep_check = True
+				if keep_check == False:
+					break
+				print("You input wrong option. Please enter between 1~5.")
+				print("")
+				print("Choose all of dice that you want to keep. Seperate number with space.")
+				print("If you want to change all of the dice, then input '0'")
+				keep = list(map(int, input().split()))
+				print("")
 
 			if keep[0] == 0 and len(keep) == 1:
 				result = random.choices(range(1, 7), k = 5)
@@ -273,9 +319,10 @@ for i in range(13):
 			print("Reroll the dice? [Y/N]", end = ' ')
 			reroll = input()
 			print("")
+			
 			while True:
 				if reroll not in ['Y', 'N']:
-					print("You input wrong option. Please enter again.")
+					print("You input wrong option. Please enter [Y/N].")
 					print("")
 					print("Reroll the dice? [Y/N]", end = ' ')
 					reroll = input()
@@ -287,6 +334,21 @@ for i in range(13):
 				print("Choose all of dice that you wnat to keep. Seperate number with space.")
 				print("If you want to change all of the dice, then input '0'")
 				keep = list(map(int, input().split()))
+				print("")
+
+				while True:
+					keep_check = False
+					for i in keep:
+						if (i < 1 or i > 5) or !isdigit(i):
+							keep_check = True
+					if keep_check == False:
+						break
+					print("You input wrong option. Please enter between 1~5.")
+					print("")
+					print("Choose all of dice that you want to keep. Seperate number with space.")
+					print("If you want to change all of the dice, then input '0'")
+					keep = list(map(int, input().split()))
+					print("")
 
 				if keep[0] == 0 and len(keep) == 1:
 					result = random.choices(range(1, 7), k = 5)
@@ -354,6 +416,7 @@ for i in range(13):
 		print("Choose a category to record the score")
 		category = input()
 		print("")
+		
 		while True:
 			if category not in p2_scores.keys() or p2_scores[category] != 0:
 				print("You input wrong category. Please enter again.")
