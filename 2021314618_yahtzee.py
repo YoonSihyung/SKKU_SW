@@ -11,7 +11,7 @@ p2_scores_expected = {'Aces': 0, 'Twos': 0, 'Threes': 0, 'Fours': 0, 'Fives': 0,
 for i in range(13):
 	#Player 1 Turn
 
-	print("Player 1: Round %d" % i)
+	print("Player 1: Round %d" % (i+1))
 	print("Choose the option.")
 	print("1. Roll the dice")
 	print("2. Check the score sheet")
@@ -51,7 +51,7 @@ for i in range(13):
 			print("")
 			print("Player 1 Current Score: %d" % p1_total_score)
 			print("")
-			print("Player 1: Round %d" % i)
+			print("Player 1: Round %d" % (i+1))
 			print("Choose the option.")
 			print("1. Roll the dice")
 			print("2. Check the score sheet")
@@ -230,7 +230,7 @@ for i in range(13):
 
 	#Player 2 Turn
 
-	print("Player 2: Round %d" % i)
+	print("Player 2: Round %d" % (i+1))
 	print("Choose the option.")
 	print("1. Roll the dice")
 	print("2. Check the score sheet")
@@ -267,7 +267,7 @@ for i in range(13):
 			print("")
 			print("Player 2 Current Score: %d" % p2_total_score)
 			print("")
-			print("Player 2: Round %d" % i)
+			print("Player 2: Round %d" % (i+1))
 			print("Choose the option.")
 			print("1. Roll the dice")
 			print("2. Check the score sheet")
