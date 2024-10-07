@@ -87,6 +87,8 @@ for i in range(13):
 
 			while True:
 				keep_check = False
+				if keep[0] == '0' and len(keep) == 1:
+					break
 				for j in keep:
 					if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 						keep_check = True
@@ -133,6 +135,8 @@ for i in range(13):
 
 				while True:
 					keep_check = False
+					if keep[0] == '0' and len(keep) == 1:
+						break
 					for j in keep:
 						if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 							keep_check = True
@@ -302,6 +306,8 @@ for i in range(13):
 
 			while True:
 				keep_check = False
+				if keep[0] == '0' and len(keep) == 1:
+					break
 				for j in keep:
 					if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 						keep_check = True
@@ -348,6 +354,8 @@ for i in range(13):
 
 				while True:
 					keep_check = False
+					if keep[0] == '0' and len(keep) == 1:
+						break
 					for j in keep:
 						if j.isdigit() == False or (int(j) < 1 or int(j) > 5):
 							keep_check = True
