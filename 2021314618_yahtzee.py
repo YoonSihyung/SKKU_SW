@@ -82,12 +82,13 @@ for i in range(13):
 		if reroll == 'Y':
 			print("Choose all of dice that you want to keep. Seperate number with space.")
 			print("If you want to change all of the dice, then input '0'")
-			keep = list(map(int, input().split()))
-			#wrong input handling
+			keep = list(input().split())
+			print("")
+
 			while True:
 				keep_check = False
 				for i in keep:
-					if (i < 1 or i > 5) or i.isdigit() == False:
+					if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
 						keep_check = True
 				if keep_check == False:
 					break
@@ -97,6 +98,9 @@ for i in range(13):
 				print("If you want to change all of the dice, then input '0'")
 				keep = list(map(int, input().split()))
 				print("")
+
+			for i in range(len(keep)):
+				keep[i] = int(keep[i])
 			
 			if keep[0] == 0 and len(keep) == 1:
 				result = random.choices(range(1, 7), k = 5)
@@ -124,13 +128,13 @@ for i in range(13):
 			if reroll == 'Y':
 				print("Choose all of dice that you wnat to keep. Seperate number with space.")
 				print("If you want to change all of the dice, then input '0'")
-				keep = list(map(int, input().split()))
+				keep = list(input().split())
 				print("")
 
 				while True:
 					keep_check = False
 					for i in keep:
-						if (i < 1 or i > 5) or i.isdigit() == False:
+						if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
 							keep_check = True
 					if keep_check == False:
 						break
@@ -140,6 +144,9 @@ for i in range(13):
 					print("If you want to change all of the dice, then input '0'")
 					keep = list(map(int, input().split()))
 					print("")
+
+				for i in range(len(keep)):
+					keep[i] = int(keep[i])
 
 				if keep[0] == 0 and len(keep) == 1:
 					result = random.choices(range(1, 7), k = 5)
@@ -290,13 +297,13 @@ for i in range(13):
 		if reroll == 'Y':
 			print("Choose all of dice that you want to keep. Seperate number with space.")
 			print("If you want to change all of the dice, then input '0'")
-			keep = list(map(int, input().split()))
+			keep = list(input().split())
 			print("")
-                        #wrong input handling
+
 			while True:
 				keep_check = False
 				for i in keep:
-					if (i < 1 or i > 5) or i.isdigit() == False:
+					if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
 						keep_check = True
 				if keep_check == False:
 					break
@@ -306,6 +313,9 @@ for i in range(13):
 				print("If you want to change all of the dice, then input '0'")
 				keep = list(map(int, input().split()))
 				print("")
+
+			for i in range(len(keep)):
+				keep[i] = int(keep[i])
 
 			if keep[0] == 0 and len(keep) == 1:
 				result = random.choices(range(1, 7), k = 5)
@@ -333,13 +343,13 @@ for i in range(13):
 			if reroll == 'Y':
 				print("Choose all of dice that you wnat to keep. Seperate number with space.")
 				print("If you want to change all of the dice, then input '0'")
-				keep = list(map(int, input().split()))
+				keep = list(input().split())
 				print("")
 
 				while True:
 					keep_check = False
 					for i in keep:
-						if (i < 1 or i > 5) or i.isdigit() == False:
+						if i.isdigit() == False or (int(i) < 1 or int(i) > 5):
 							keep_check = True
 					if keep_check == False:
 						break
@@ -349,6 +359,9 @@ for i in range(13):
 					print("If you want to change all of the dice, then input '0'")
 					keep = list(map(int, input().split()))
 					print("")
+
+				for i in range(len(keep)):
+					keep[i] = int(keep[i])
 
 				if keep[0] == 0 and len(keep) == 1:
 					result = random.choices(range(1, 7), k = 5)
