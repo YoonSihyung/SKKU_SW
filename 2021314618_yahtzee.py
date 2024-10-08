@@ -173,12 +173,12 @@ for i in range(13):
 				elif result.count(j) >= 3:
 					tok_check = True
 
-		temp_list = sorted(result)
+		temp_sorted_setlist = sorted(list(set(result)))
 		ss_check = False
 		ls_check = False
-		if (temp_list[:4] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]] or temp_list[1:] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]]):
+		if (temp_sorted_setlist[:4] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]] or temp_sorted_setlist[1:] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]]):
 			ss_check = True
-		if temp_list in [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6]]:
+		if temp_sorted_setlist in [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6]]:
 			ls_check = True
 
 		p1_scores_expected['Aces'] = result.count(1)
@@ -392,12 +392,12 @@ for i in range(13):
 				elif result.count(j) >= 3:
 					tok_check = True
 
-		temp_list = sorted(result)
+		temp_sorted_setlist = sorted(list(set(result)))
 		ss_check = False
 		ls_check = False
-		if (temp_list[:4] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]] or temp_list[1:] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]]):
+		if (temp_sorted_setlist[:4] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]] or temp_sorted_setlist[1:] in [[1, 2, 3, 4], [2, 3, 4, 5], [3, 4, 5, 6]]):
 			ss_check = True
-		if temp_list in [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6]]:
+		if temp_sorted_setlist in [[1, 2, 3, 4, 5], [2, 3, 4, 5, 6]]:
 			ls_check = True
 
 		p2_scores_expected['Aces'] = result.count(1)
