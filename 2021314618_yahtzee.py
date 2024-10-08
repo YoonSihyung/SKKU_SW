@@ -232,7 +232,7 @@ for i in range(13):
 			else:
 				break
 		p1_scores[category][0] = p1_scores_expected[category]
-		p1_total_score = sum([p1_scores.values[j][0] for j in range(13)])
+		p1_total_score = sum([p1_scores.values()[j][0] for j in range(13)])
 
 
 	#Player 2 Turn
@@ -454,4 +454,4 @@ for i in range(13):
 			else:
 				break
 		p2_scores[category][0] = p2_scores_expected[category]
-		p2_total_score = sum([p2_scores.values[j][0] for j in range(13)])
+		p2_total_score = sum([p2_scores.values()[j][0] for j in range(13)])
