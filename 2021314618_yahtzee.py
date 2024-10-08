@@ -232,6 +232,7 @@ for i in range(13):
 			else:
 				break
 		p1_scores[category][0] = p1_scores_expected[category]
+		p1_scores[category][1] = True
 		p1_total_score = sum([list(p1_scores.values())[j][0] for j in range(13)])
 
 
@@ -454,4 +455,5 @@ for i in range(13):
 			else:
 				break
 		p2_scores[category][0] = p2_scores_expected[category]
+                p2_scores[category][1] = True
 		p2_total_score = sum([list(p2_scores.values())[j][0] for j in range(13)])
