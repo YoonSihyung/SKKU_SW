@@ -166,11 +166,11 @@ for i in range(13):
 		tok_check = False
 		fok_check = False
 		if len(temp_set) <= 3:
-			for i in temp_set:
-				if result.count(i) >= 4:
+			for j in temp_set:
+				if result.count(j) >= 4:
 					tok_check = True
 					fok_check = True
-				elif result.count(i) >= 3:
+				elif result.count(j) >= 3:
 					tok_check = True
 
 		temp_list = sorted(result)
@@ -385,11 +385,11 @@ for i in range(13):
 		tok_check = False
 		fok_check = False
 		if len(temp_set) <= 3:
-			for i in temp_set:
-				if result.count(i) >= 4:
+			for j in temp_set:
+				if result.count(j) >= 4:
 					tok_check = True
 					fok_check = True
-				elif result.count(i) >= 3:
+				elif result.count(j) >= 3:
 					tok_check = True
 
 		temp_list = sorted(result)
