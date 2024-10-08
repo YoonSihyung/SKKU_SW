@@ -1,11 +1,11 @@
 import random
 
 p1_total_score = 0
-p1_scores = {'Aces': 0, 'Twos': 0, 'Threes': 0, 'Fours': 0, 'Fives': 0, 'Sixes': 0, 'Chance': 0, 'Three of a Kind': 0, 'Four of a Kind': 0, 'Full House': 0, 'Small Straight': 0, 'Large Straight': 0, 'Yahtzee': 0}
+p1_scores = {'Aces': [0, False], 'Twos': [0, False], 'Threes': [0, False], 'Fours': [0, False], 'Fives': [0, False], 'Sixes': [0, False], 'Chance': [0, False], 'Three of a Kind': [0, False], 'Four of a Kind': [0, False], 'Full House': [0, False], 'Small Straight': [0, False], 'Large Straight': [0, False], 'Yahtzee': [0, False]}
 p1_scores_expected = {'Aces': 0, 'Twos': 0, 'Threes': 0, 'Fours': 0, 'Fives': 0, 'Sixes': 0, 'Chance': 0, 'Three of a Kind': 0, 'Four of a Kind': 0, 'Full House': 0, 'Small Straight': 0, 'Large Straight': 0, 'Yahtzee': 0}
 
 p2_total_score = 0
-p2_scores = {'Aces': 0, 'Twos': 0, 'Threes': 0, 'Fours': 0, 'Fives': 0, 'Sixes': 0, 'Chance': 0, 'Three of a Kind': 0, 'Four of a Kind': 0, 'Full House': 0, 'Small Straight': 0, 'Large Straight': 0, 'Yahtzee': 0}
+p2_scores = {'Aces': [0, False], 'Twos': [0, False], 'Threes': [0, False], 'Fours': [0, False], 'Fives': [0, False], 'Sixes': [0, False], 'Chance': [0, False], 'Three of a Kind': [0, False], 'Four of a Kind': [0, False], 'Full House': [0, False], 'Small Straight': [0, False], 'Large Straight': [0, False], 'Yahtzee': [0, False]}
 p2_scores_expected = {'Aces': 0, 'Twos': 0, 'Threes': 0, 'Fours': 0, 'Fives': 0, 'Sixes': 0, 'Chance': 0, 'Three of a Kind': 0, 'Four of a Kind': 0, 'Full House': 0, 'Small Straight': 0, 'Large Straight': 0, 'Yahtzee': 0}
 
 for i in range(13):
@@ -36,19 +36,19 @@ for i in range(13):
 			print("+-----------------+-------+")
 			print("|    Category     | Score |")
 			print("+-----------------+-------+")
-			print("|      Aces       |%4s   |" % (str(p1_scores['Aces']) if p1_scores['Aces'] != 0 else '-'))
-			print("|      Twos       |%4s   |" % (str(p1_scores['Twos']) if p1_scores['Twos'] != 0 else '-'))
-			print("|     Threes      |%4s   |" % (str(p1_scores['Threes']) if p1_scores['Threes'] != 0 else '-'))
-			print("|      Fours      |%4s   |" % (str(p1_scores['Fours']) if p1_scores['Fours'] != 0 else '-'))
-			print("|      Fives      |%4s   |" % (str(p1_scores['Fives']) if p1_scores['Fives'] != 0 else '-'))
-			print("|      Sixes      |%4s   |" % (str(p1_scores['Sixes']) if p1_scores['Sixes'] != 0 else '-'))
-			print("|     Chance      |%4s   |" % (str(p1_scores['Chance']) if p1_scores['Chance'] != 0 else '-'))
-			print("| Three of a Kind |%4s   |" % (str(p1_scores['Three of a Kind']) if p1_scores['Three of a Kind'] != 0 else '-'))
-			print("| Four of a Kind  |%4s   |" % (str(p1_scores['Four of a Kind']) if p1_scores['Four of a Kind'] != 0 else '-'))
-			print("|   Full House    |%4s   |" % (str(p1_scores['Full House']) if p1_scores['Full House'] != 0 else '-'))
-			print("| Small Straight  |%4s   |" % (str(p1_scores['Small Straight']) if p1_scores['Small Straight'] != 0 else '-'))
-			print("| Large Straight  |%4s   |" % (str(p1_scores['Large Straight']) if p1_scores['Large Straight'] != 0 else '-'))
-			print("|     Yahtzee     |%4s   |" % (str(p1_scores['Yahtzee']) if p1_scores['Yahtzee'] != 0 else '-'))
+			print("|      Aces       |%4s   |" % (str(p1_scores['Aces']) if p1_scores['Aces'][1] != False else '-'))
+			print("|      Twos       |%4s   |" % (str(p1_scores['Twos']) if p1_scores['Twos'][1] != False else '-'))
+			print("|     Threes      |%4s   |" % (str(p1_scores['Threes']) if p1_scores['Threes'][1] != False else '-'))
+			print("|      Fours      |%4s   |" % (str(p1_scores['Fours']) if p1_scores['Fours'][1] != False else '-'))
+			print("|      Fives      |%4s   |" % (str(p1_scores['Fives']) if p1_scores['Fives'][1] != False else '-'))
+			print("|      Sixes      |%4s   |" % (str(p1_scores['Sixes']) if p1_scores['Sixes'][1] != False else '-'))
+			print("|     Chance      |%4s   |" % (str(p1_scores['Chance']) if p1_scores['Chance'][1] != False else '-'))
+			print("| Three of a Kind |%4s   |" % (str(p1_scores['Three of a Kind']) if p1_scores['Three of a Kind'][1] != False else '-'))
+			print("| Four of a Kind  |%4s   |" % (str(p1_scores['Four of a Kind']) if p1_scores['Four of a Kind'][1] != False else '-'))
+			print("|   Full House    |%4s   |" % (str(p1_scores['Full House']) if p1_scores['Full House'][1] != False else '-'))
+			print("| Small Straight  |%4s   |" % (str(p1_scores['Small Straight']) if p1_scores['Small Straight'][1] != False else '-'))
+			print("| Large Straight  |%4s   |" % (str(p1_scores['Large Straight']) if p1_scores['Large Straight'][1] != False else '-'))
+			print("|     Yahtzee     |%4s   |" % (str(p1_scores['Yahtzee']) if p1_scores['Yahtzee'][1] != False else '-'))
 			print("+-----------------+-------+")
 			print("")
 			print("Player 1 Current Score: %d" % p1_total_score)
@@ -203,19 +203,19 @@ for i in range(13):
 		print("+-----------------+-------+")
 		print("|    Category     | Score |")
 		print("+-----------------+-------+")
-		print("|      Aces       |%4s   |" % (str(p1_scores_expected['Aces']) if p1_scores['Aces'] == 0 else '-'))
-		print("|      Twos       |%4s   |" % (str(p1_scores_expected['Twos']) if p1_scores['Twos'] == 0 else '-'))
-		print("|     Threes      |%4s   |" % (str(p1_scores_expected['Threes']) if p1_scores['Threes'] == 0 else '-'))
-		print("|      Fours      |%4s   |" % (str(p1_scores_expected['Fours']) if p1_scores['Fours'] == 0 else '-'))
-		print("|      Fives      |%4s   |" % (str(p1_scores_expected['Fives']) if p1_scores['Fives'] == 0 else '-'))
-		print("|      Sixes      |%4s   |" % (str(p1_scores_expected['Sixes']) if p1_scores['Sixes'] == 0 else '-'))
-		print("|     Chance      |%4s   |" % (str(p1_scores_expected['Chance']) if p1_scores['Chance'] == 0 else '-'))
-		print("| Three of a Kind |%4s   |" % (str(p1_scores_expected['Three of a Kind']) if p1_scores['Three of a Kind'] == 0 else '-'))
-		print("| Four of a Kind  |%4s   |" % (str(p1_scores_expected['Four of a Kind']) if p1_scores['Four of a Kind'] == 0 else '-'))
-		print("|   Full House    |%4s   |" % (str(p1_scores_expected['Full House']) if p1_scores['Full House'] == 0 else '-'))
-		print("| Small Straight  |%4s   |" % (str(p1_scores_expected['Small Straight']) if p1_scores['Small Straight'] == 0 else '-'))
-		print("| Large Straight  |%4s   |" % (str(p1_scores_expected['Large Straight']) if p1_scores['Large Straight'] == 0 else '-'))
-		print("|     Yahtzee     |%4s   |" % (str(p1_scores_expected['Yahtzee']) if p1_scores['Yahtzee'] == 0 else '-'))
+		print("|      Aces       |%4s   |" % (str(p1_scores_expected['Aces']) if p1_scores['Aces'][1] == False else '-'))
+		print("|      Twos       |%4s   |" % (str(p1_scores_expected['Twos']) if p1_scores['Twos'][1] == False else '-'))
+		print("|     Threes      |%4s   |" % (str(p1_scores_expected['Threes']) if p1_scores['Threes'][1] == False else '-'))
+		print("|      Fours      |%4s   |" % (str(p1_scores_expected['Fours']) if p1_scores['Fours'][1] == False else '-'))
+		print("|      Fives      |%4s   |" % (str(p1_scores_expected['Fives']) if p1_scores['Fives'][1] == False else '-'))
+		print("|      Sixes      |%4s   |" % (str(p1_scores_expected['Sixes']) if p1_scores['Sixes'][1] == False else '-'))
+		print("|     Chance      |%4s   |" % (str(p1_scores_expected['Chance']) if p1_scores['Chance'][1] == False else '-'))
+		print("| Three of a Kind |%4s   |" % (str(p1_scores_expected['Three of a Kind']) if p1_scores['Three of a Kind'][1] == False else '-'))
+		print("| Four of a Kind  |%4s   |" % (str(p1_scores_expected['Four of a Kind']) if p1_scores['Four of a Kind'][1] == False else '-'))
+		print("|   Full House    |%4s   |" % (str(p1_scores_expected['Full House']) if p1_scores['Full House'][1] == False else '-'))
+		print("| Small Straight  |%4s   |" % (str(p1_scores_expected['Small Straight']) if p1_scores['Small Straight'][1] == False else '-'))
+		print("| Large Straight  |%4s   |" % (str(p1_scores_expected['Large Straight']) if p1_scores['Large Straight'][1] == False else '-'))
+		print("|     Yahtzee     |%4s   |" % (str(p1_scores_expected['Yahtzee']) if p1_scores['Yahtzee'][1] == False else '-'))
 		print("+-----------------+-------+")
 		print("")
 		print("Choose a category to record the score")
@@ -223,7 +223,7 @@ for i in range(13):
 		print("")
 		
 		while True:
-			if category not in p1_scores.keys() or p1_scores[category] != 0:
+			if category not in p1_scores.keys() or p1_scores[category][1] != False:
 				print("You input wrong category. Please enter again.")
 				print("")
 				print("Choose a category to record the score")
@@ -231,8 +231,8 @@ for i in range(13):
 				print("")
 			else:
 				break
-		p1_scores[category] = p1_scores_expected[category]
-		p1_total_score = sum(p1_scores.values())
+		p1_scores[category][0] = p1_scores_expected[category]
+		p1_total_score = sum([p1_scores.values[j][0] for j in range(13)])
 
 
 	#Player 2 Turn
@@ -259,19 +259,19 @@ for i in range(13):
 			print("+-----------------+-------+")
 			print("|    Category     | Score |")
 			print("+-----------------+-------+")
-			print("|      Aces       |%4s   |" % (str(p2_scores['Aces']) if p2_scores['Aces'] != 0 else '-'))
-			print("|      Twos       |%4s   |" % (str(p2_scores['Twos']) if p2_scores['Twos'] != 0 else '-'))
-			print("|     Threes      |%4s   |" % (str(p2_scores['Threes']) if p2_scores['Threes'] != 0 else '-'))
-			print("|      Fours      |%4s   |" % (str(p2_scores['Fours']) if p2_scores['Fours'] != 0 else '-'))
-			print("|      Fives      |%4s   |" % (str(p2_scores['Fives']) if p2_scores['Fives'] != 0 else '-'))
-			print("|      Sixes      |%4s   |" % (str(p2_scores['Sixes']) if p2_scores['Sixes'] != 0 else '-'))
-			print("|     Chance      |%4s   |" % (str(p2_scores['Chance']) if p2_scores['Chance'] != 0 else '-'))
-			print("| Three of a Kind |%4s   |" % (str(p2_scores['Three of a Kind']) if p2_scores['Three of a Kind'] != 0 else '-'))
-			print("| Four of a Kind  |%4s   |" % (str(p2_scores['Four of a Kind']) if p2_scores['Four of a Kind'] != 0 else '-'))
-			print("|   Full House    |%4s   |" % (str(p2_scores['Full House']) if p2_scores['Full House'] != 0 else '-'))
-			print("| Small Straight  |%4s   |" % (str(p2_scores['Small Straight']) if p2_scores['Small Straight'] != 0 else '-'))
-			print("| Large Straight  |%4s   |" % (str(p2_scores['Large Straight']) if p2_scores['Large Straight'] != 0 else '-'))
-			print("|     Yahtzee     |%4s   |" % (str(p2_scores['Yahtzee']) if p2_scores['Yahtzee'] != 0 else '-'))
+			print("|      Aces       |%4s   |" % (str(p2_scores['Aces']) if p2_scores['Aces'][1] != False else '-'))
+			print("|      Twos       |%4s   |" % (str(p2_scores['Twos']) if p2_scores['Twos'][1] != False else '-'))
+			print("|     Threes      |%4s   |" % (str(p2_scores['Threes']) if p2_scores['Threes'][1] != False else '-'))
+			print("|      Fours      |%4s   |" % (str(p2_scores['Fours']) if p2_scores['Fours'][1] != False else '-'))
+			print("|      Fives      |%4s   |" % (str(p2_scores['Fives']) if p2_scores['Fives'][1] != False else '-'))
+			print("|      Sixes      |%4s   |" % (str(p2_scores['Sixes']) if p2_scores['Sixes'][1] != False else '-'))
+			print("|     Chance      |%4s   |" % (str(p2_scores['Chance']) if p2_scores['Chance'][1] != False else '-'))
+			print("| Three of a Kind |%4s   |" % (str(p2_scores['Three of a Kind']) if p2_scores['Three of a Kind'][1] != False else '-'))
+			print("| Four of a Kind  |%4s   |" % (str(p2_scores['Four of a Kind']) if p2_scores['Four of a Kind'][1] != False else '-'))
+			print("|   Full House    |%4s   |" % (str(p2_scores['Full House']) if p2_scores['Full House'][1] != False else '-'))
+			print("| Small Straight  |%4s   |" % (str(p2_scores['Small Straight']) if p2_scores['Small Straight'][1] != False else '-'))
+			print("| Large Straight  |%4s   |" % (str(p2_scores['Large Straight']) if p2_scores['Large Straight'][1] != False else '-'))
+			print("|     Yahtzee     |%4s   |" % (str(p2_scores['Yahtzee']) if p2_scores['Yahtzee'][1] != False else '-'))
 			print("+-----------------+-------+")
 			print("")
 			print("Player 2 Current Score: %d" % p2_total_score)
@@ -425,19 +425,19 @@ for i in range(13):
 		print("+-----------------+-------+")
 		print("|    Category     | Score |")
 		print("+-----------------+-------+")
-		print("|      Aces       |%4s   |" % (str(p2_scores_expected['Aces']) if p2_scores['Aces'] == 0 else '-'))
-		print("|      Twos       |%4s   |" % (str(p2_scores_expected['Twos']) if p2_scores['Twos'] == 0 else '-'))
-		print("|     Threes      |%4s   |" % (str(p2_scores_expected['Threes']) if p2_scores['Threes'] == 0 else '-'))
-		print("|      Fours      |%4s   |" % (str(p2_scores_expected['Fours']) if p2_scores['Fours'] == 0 else '-'))
-		print("|      Fives      |%4s   |" % (str(p2_scores_expected['Fives']) if p2_scores['Fives'] == 0 else '-'))
-		print("|      Sixes      |%4s   |" % (str(p2_scores_expected['Sixes']) if p2_scores['Sixes'] == 0 else '-'))
-		print("|     Chance      |%4s   |" % (str(p2_scores_expected['Chance']) if p2_scores['Chance'] == 0 else '-'))
-		print("| Three of a Kind |%4s   |" % (str(p2_scores_expected['Three of a Kind']) if p2_scores['Three of a Kind'] == 0 else '-'))
-		print("| Four of a Kind  |%4s   |" % (str(p2_scores_expected['Four of a Kind']) if p2_scores['Four of a Kind'] == 0 else '-'))
-		print("|   Full House    |%4s   |" % (str(p2_scores_expected['Full House']) if p2_scores['Full House'] == 0 else '-'))
-		print("| Small Straight  |%4s   |" % (str(p2_scores_expected['Small Straight']) if p2_scores['Small Straight'] == 0 else '-'))
-		print("| Large Straight  |%4s   |" % (str(p2_scores_expected['Large Straight']) if p2_scores['Large Straight'] == 0 else '-'))
-		print("|     Yahtzee     |%4s   |" % (str(p2_scores_expected['Yahtzee']) if p2_scores['Yahtzee'] == 0 else '-'))
+		print("|      Aces       |%4s   |" % (str(p2_scores_expected['Aces']) if p2_scores['Aces'][1] == False else '-'))
+		print("|      Twos       |%4s   |" % (str(p2_scores_expected['Twos']) if p2_scores['Twos'][1] == False else '-'))
+		print("|     Threes      |%4s   |" % (str(p2_scores_expected['Threes']) if p2_scores['Threes'][1] == False else '-'))
+		print("|      Fours      |%4s   |" % (str(p2_scores_expected['Fours']) if p2_scores['Fours'][1] == False else '-'))
+		print("|      Fives      |%4s   |" % (str(p2_scores_expected['Fives']) if p2_scores['Fives'][1] == False else '-'))
+		print("|      Sixes      |%4s   |" % (str(p2_scores_expected['Sixes']) if p2_scores['Sixes'][1] == False else '-'))
+		print("|     Chance      |%4s   |" % (str(p2_scores_expected['Chance']) if p2_scores['Chance'][1] == False else '-'))
+		print("| Three of a Kind |%4s   |" % (str(p2_scores_expected['Three of a Kind']) if p2_scores['Three of a Kind'][1] == False else '-'))
+		print("| Four of a Kind  |%4s   |" % (str(p2_scores_expected['Four of a Kind']) if p2_scores['Four of a Kind'][1] == False else '-'))
+		print("|   Full House    |%4s   |" % (str(p2_scores_expected['Full House']) if p2_scores['Full House'][1] == False else '-'))
+		print("| Small Straight  |%4s   |" % (str(p2_scores_expected['Small Straight']) if p2_scores['Small Straight'][1] == False else '-'))
+		print("| Large Straight  |%4s   |" % (str(p2_scores_expected['Large Straight']) if p2_scores['Large Straight'][1] == False else '-'))
+		print("|     Yahtzee     |%4s   |" % (str(p2_scores_expected['Yahtzee']) if p2_scores['Yahtzee'][1] == False else '-'))
 		print("+-----------------+-------+")
 		print("")
 		print("Choose a category to record the score")
@@ -445,7 +445,7 @@ for i in range(13):
 		print("")
 		
 		while True:
-			if category not in p2_scores.keys() or p2_scores[category] != 0:
+			if category not in p2_scores.keys() or p2_scores[category][1] != False:
 				print("You input wrong category. Please enter again.")
 				print("")
 				print("Choose a category to record the score")
@@ -453,5 +453,5 @@ for i in range(13):
 				print("")
 			else:
 				break
-		p2_scores[category] = p2_scores_expected[category]
-		p2_total_score = sum(p2_scores.values())
+		p2_scores[category][0] = p2_scores_expected[category]
+		p2_total_score = sum([p2_scores.values[j][0] for j in range(13)])
