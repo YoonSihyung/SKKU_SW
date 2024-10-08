@@ -457,3 +457,17 @@ for i in range(13):
 		p2_scores[category][0] = p2_scores_expected[category]
 		p2_scores[category][1] = True
 		p2_total_score = sum([list(p2_scores.values())[j][0] for j in range(13)])
+
+
+if p1_total_score > p2_total_score:
+	print("+-----------------------------+")
+	print("|        Player 1 Win!!       |")
+	print("+-----------------------------+")
+elif p1_total_score < p2_total_score:
+	print("+-----------------------------+")
+	print("|        Player 2 Win!!       |")
+	print("+-----------------------------+")
+else:
+	print("+-----------------------------+")
+	print("|             Draw            |")
+	print("+-----------------------------+")
