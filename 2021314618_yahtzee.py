@@ -292,7 +292,7 @@ for i in range(13):
 		result = random.choices(range(1, 7), k = 5)
 		print("Result of dice")
 		print(result)
-		print("Reroll the dice? [Y/N]", end = '')
+		print("Reroll the dice? [Y/N]", end = ' ')
 		reroll = input()
 		print("")
 		while True:
