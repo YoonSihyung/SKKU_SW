@@ -98,7 +98,7 @@ for i in range(13):
 				print("")
 				print("Choose all of dice that you want to keep. Seperate number with space.")
 				print("If you want to change all of the dice, then input '0'")
-				keep = list(map(int, input().split()))
+				keep = list(input().split())
 				print("")
 
 			for j in range(len(keep)):
@@ -146,7 +146,7 @@ for i in range(13):
 					print("")
 					print("Choose all of dice that you want to keep. Seperate number with space.")
 					print("If you want to change all of the dice, then input '0'")
-					keep = list(map(int, input().split()))
+					keep = list(input().split())
 					print("")
 
 				for j in range(len(keep)):
@@ -317,7 +317,7 @@ for i in range(13):
 				print("")
 				print("Choose all of dice that you want to keep. Seperate number with space.")
 				print("If you want to change all of the dice, then input '0'")
-				keep = list(map(int, input().split()))
+				keep = list(input().split())
 				print("")
 
 			for j in range(len(keep)):
@@ -365,7 +365,7 @@ for i in range(13):
 					print("")
 					print("Choose all of dice that you want to keep. Seperate number with space.")
 					print("If you want to change all of the dice, then input '0'")
-					keep = list(map(int, input().split()))
+					keep = list(input().split())
 					print("")
 
 				for j in range(len(keep)):
