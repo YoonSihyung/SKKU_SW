@@ -27,7 +27,8 @@ for i in range(13):
 			print("Choose the option.")
 			print("1. Roll the dice")
 			print("2. Check the score sheet")
-			option = int(input())
+			temp_option = input()
+			option = int(temp_option) if temp_option in ['1', '2'] else temp_option
 			print("")
 		#option 2 loop
 		elif option == 2:
@@ -56,7 +57,8 @@ for i in range(13):
 			print("Choose the option.")
 			print("1. Roll the dice")
 			print("2. Check the score sheet")
-			option = int(input())
+			temp_option = input()
+			option = int(temp_option) if temp_option in ['1', '2'] else temp_option
 			print("")
 
 		else:
@@ -249,7 +251,8 @@ for i in range(13):
 			print("Choose the option.")
 			print("1. Roll the dice")
 			print("2. Check the score sheet")
-			option = int(input())
+			temp_option = input()
+			option = int(temp_option) if temp_option in ['1', '2'] else temp_option
 			print("")
 		elif option == 2:
 			print("+-------<Player 2>--------+")
@@ -277,7 +280,8 @@ for i in range(13):
 			print("Choose the option.")
 			print("1. Roll the dice")
 			print("2. Check the score sheet")
-			option = int(input())
+			temp_option = input()
+			option = int(temp_option) if temp_option in ['1', '2'] else temp_option
 			print("")
 
 		else:
