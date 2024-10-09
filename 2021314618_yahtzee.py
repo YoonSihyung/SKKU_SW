@@ -458,6 +458,9 @@ for i in range(13):
 		p2_scores[category][1] = True
 		p2_total_score = sum([list(p2_scores.values())[j][0] for j in range(13)])
 
+print("Player 1 Final Score: %d" % p1_total_score)
+print("Player 2 Final Score: %d" % p2_total_score)
+print("")
 
 if p1_total_score > p2_total_score:
 	print("+-----------------------------+")
